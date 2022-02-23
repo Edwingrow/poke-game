@@ -10,7 +10,7 @@ const Intro = ({ startGame }) => {
                     <li> <strong>Si adivinas</strong>Capturaras el pokemon y se registrara en tu pokedex</li>
                     <li> <strong>Si No adivinas</strong>El pokemon escapara y no lo perderas</li>
                 </ul>
-                <p>As´que piensalo muy bien antes de elegir el tipo de pokemon</p>
+                <p>Asi que piensalo muy bien antes de elegir el tipo de pokemon</p>
             </div>
             <div onClick={startGame} className="start-game">
                 Empezar a jugar
