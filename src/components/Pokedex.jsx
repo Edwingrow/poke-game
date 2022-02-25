@@ -12,7 +12,7 @@ const PokeDex = ({myPokemones, toogle}) => {
                 })
             }
         </div>
-        <div onClick={() => {toogle(false)}} className="close-podedex">x</div>
+        <div onClick={() => {toogle(false)}} className="close-podedex">X</div>
     </div>
   )
 }
