@@ -33,7 +33,7 @@ const Gamesound = () => {
         <div onClick={power} className="audio-button">
             <div className="audio-button-icon">
                 {
-                    playing ? "Pause" : "Play"
+                    playing ? "Pause" : "Music"
                 }
             </div>
         </div>
