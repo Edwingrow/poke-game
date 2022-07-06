@@ -12,6 +12,12 @@ const Intro = ({ startGame }) => {
                     <li> <strong>Si No adivinas</strong> el pokemon escapa y se perderá</li>
                 </ul>
                 <p>Asi que piensalo muy bien antes de elegir el tipo de pokemon</p>
+                <p>
+                    Solo tendrás <strong>3</strong> vidas
+                </p>
+                <p>
+                    Si pierdes toda las vidas termina el juego
+                </p>
             </div>
             <div onClick={startGame} className="start-game">
                 Empezar a jugar

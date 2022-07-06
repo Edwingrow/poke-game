@@ -145,6 +145,7 @@ code {
   padding-left: 40px;
   padding-right: 40px;
   overflow-x: scroll;
+  flex-direction: column;
 
 }
 
@@ -181,7 +182,7 @@ code {
   font-size: 0.8rem;
   margin-top: 10px;
   margin-bottom: -10px;
-  color: #c1c1c1;
+  color: #171616;
 }
 
 .pokemon-image {
