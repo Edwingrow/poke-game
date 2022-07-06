@@ -4,7 +4,7 @@ import Pokedex from './components/Pokedex';
 import GameSound from './components/GameSound';
 import Loading from './components/Loading';
 import {getPokeApi, getPokeApiData}   from './services/getPokeApi';
-import Level1 from './components/Level1';
+import Level from './components/Level';
 import EndGame from './components/EndGame';
 const App = () => {
   const [kantonPokemones, setKantonPokemones] = useState([]);
@@ -15,9 +15,9 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [gameStart, setGameStart] = useState(false);
   const [gameOver, setGameOver] = useState(false);
-  // const [ setShowStats] = useState(false);
-  // // const [setCatched] = useState(false)
-  // const [ setStatusPokemon] = useState(null);
+  const [ setShowStats] = useState(false);
+  const [setCatched] = useState(false)
+  const [ startusPokemon, setStatusPokemon] = useState(null);
 
 
   const catchPokemon = (success, pokemon) => {
@@ -34,11 +34,12 @@ const App = () => {
     }, 1500);
 
   }
+//Función para el inicio del juego
 const StartGame = () => {
   setGameStart(true);
   getAllPokemons()
   }
-  const getAllPokemons = async () => {
+  const getAllPokemons = async () => { //Me trae 20 pokemones 
     setLoading(true)    
     getPokeApi("20").then(async pokemons => {
       const all = await Promise.all(
@@ -53,6 +54,8 @@ const StartGame = () => {
       console.log(all)
     })
   }
+
+  //Finalizar juego
   const endGame = async () => {
     if (gameStart) {
       setGameOver(true) 
@@ -73,7 +76,7 @@ const StartGame = () => {
     <div className="App">
       <div className='game-title'>PokeGame </div>
       <div className='game-container'>
-        {gameStart && !loading ? <Level1 availablePokemons={kantonPokemones} catchPokemon={catchPokemon} currentPokemon={currentPokemon} /> : null}
+        {gameStart && !loading ? <Level availablePokemons={kantonPokemones} catchPokemon={catchPokemon} currentPokemon={currentPokemon} /> : null}
         {gameOver ? <EndGame missedPokemons={missedPokemones} myPokemons={myPokemones} /> : null }
         {!gameStart ? <Intro startGame={StartGame} /> : null}
         {loading ? <Loading /> : null}

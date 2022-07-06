@@ -4,16 +4,16 @@ const Level1 = ({currentPokemon, catchPokemon, availablePokemons}) => {
 
     const pokemonClick = (type) =>{
         let loweCaseType = type.toLowerCase();
-        let isType = types.find(pokemonType => pokemonType.type.name === loweCaseType);
-        if(typeof isType !== 'undefined'){
+        let compareType = types.find(pokemonType => pokemonType.type.name === loweCaseType);
+        if(typeof compareType !== 'undefined'){
             catchPokemon(currentPokemon);
         } else {
-            console.log('Pokemon no disponible');
+           catchPokemon(false, currentPokemon)
         }
     }
     return (
         <>
-            <div className='available-pokemons'>Pokemones por atrapar: ({availablePokemons.length})</div>
+            {/* <div className='available-pokemons'>Pokemones por atrapar: ({availablePokemons.length})</div> */}
             <div className='pokemon-image'><img alt="pokemon" src={sprites.other['home']["front_default"]} /></div>
             <div className='pokemon-description'>
             <div className='pokedex-number'>Pokedex #{id}</div>

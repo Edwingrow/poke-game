@@ -1,162 +1,189 @@
-
 body {
-    margin: 0;
-    font-family: 'Open Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image:url('./assets/images/Fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  .App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  /*------------------------------------------------------*/
-  .game-container {
-    position: relative;
-    border-radius: 20px;
-    width: 300px;
-    height: 500px;
-    background-color: #f5f5f5;
-    overflow: hidden;
-    margin-left: 40%;
+  margin: 0;
+  font-family: 'Open Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/images/Fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*------------------------------------------------------*/
+/* Firma*/
+.nameFooter {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 50px;
+  z-index: 0;
+  text-align: center;
+}
+
+/*------------------------------------------------------*/
+.game-container {
+  position: relative;
+  border-radius: 20px;
+  width: 300px;
+  height: 500px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  margin-left: 40%;
 }
 
 .pre-game {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    padding: 16px;
-  }
-  
-  .pre-game-title { 
-    font-size: 22px; 
-    margin-bottom: 15px;
-  }
-  
-  .pre-game-description {
-    margin-bottom: 20px;
-  }
-  .pre-game-description ul {
-    list-style: none;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-align: left;
-  }
-  
-  .pre-game-description ul > li {
-    padding-left: 0;
-    margin-bottom: 10px;
-  }
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 16px;
+}
 
-  .start-game {
-    cursor: pointer;
-    background-color: #2e7d32;
-    padding: 8px;
-    border-radius: 4px;
-    color: white;
-  }
+.pre-game-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.pre-game-description {
+  margin-bottom: 20px;
+}
+
+.pre-game-description ul {
+  list-style: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+}
+
+.pre-game-description ul>li {
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.start-game {
+  cursor: pointer;
+  background-color: #2e7d32;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 50px;
+  z-index: 0;
+  text-align: center;
+}
+
 /* ------------------------------------------------------------------------------------------*/
-.game-title{
-    font-family:  'Press Start 2P', cursive;
-    position: absolute;
-    text-shadow: grey 1px;
-    top: 20px;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-    width: 100%;
-    color: #fff;
+.game-title {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  text-shadow: grey 1px;
+  top: 20px;
+  left: 0;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
 
 }
 
-  /* ------------------------------------------------------------------------------------------*/
-  .audio-button{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 1px solid #000;
-    box-shadow: 0 0 5px #000;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-.audio-button-icon{
-    text-align: center;
-    margin-top: 15px;
+/* ------------------------------------------------------------------------------------------*/
+.audio-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #000;
+  box-shadow: 0 0 5px #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.audio-button-icon {
+  text-align: center;
+  margin-top: 15px;
 
 }
- /* ------------------------------------------------------------------------------------------*/
- .pokedex {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.95);
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
- .pokedex-container{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    overflow-x: scroll;
 
- }
- .pokedex-title {
-    font-family:  'Press Start 2P', cursive;
-    position: absolute;
-    text-shadow: grey 1px;
-    top: 20px;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-    width: 100%;
-    color: black
-  }
-  .close-podedex{
-    cursor: pointer;
-    font-family:  'Press Start 2P', cursive;
-    position: absolute;
-    right: 30px;
-    top: 20px;
-    font-size: 30px;
-  }
+/* ------------------------------------------------------------------------------------------*/
+.pokedex {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- /* ------------------------------------------------------------------------------------------*/
-  .pokemon-description{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
- .available-pokemons {
-    font-size: 0.8rem;
-    margin-top: 10px;
-    margin-bottom: -10px;
-    color: #c1c1c1;
-  }
-  
+.pokedex-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow-x: scroll;
+
+}
+
+.pokedex-title {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  text-shadow: grey 1px;
+  top: 20px;
+  left: 0;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  color: black
+}
+
+.close-podedex {
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 30px;
+}
+
+/* ------------------------------------------------------------------------------------------*/
+.pokemon-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.available-pokemons {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  color: #c1c1c1;
+}
+
 .pokemon-image {
   padding: 10px;
   border-radius: 50%;
@@ -175,7 +202,7 @@ body {
 }
 
 .pokedex-number {
-  background-color:thistle;
+  background-color: thistle;
   padding: 4px 6px 4px 6px;
   font-weight: 300;
   font-size: 0.8rem;
@@ -191,9 +218,20 @@ body {
   font-size: 1.5rem;
   text-transform: capitalize;
 }
+
 .pokemon-type-item-container {
   display: flex;
   flex-wrap: wrap;
+  
+}
+.pokemon-type-container{
+  background-color: #a4eea5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 160px;
+  font-family: 'Patrick Hand', cursive;
 }
 .pokemon-type-title {
   font-size: 1.1rem;
@@ -203,15 +241,15 @@ body {
   justify-content: center;
 }
 
-.pokemon-type-item-container > div {
+.pokemon-type-item-container>div {
   cursor: pointer;
   flex: 0 0 25%;
   margin-bottom: 6px;
-} 
+}
 
 .status-container {
   position: absolute;
-  left: 0;  
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -219,6 +257,7 @@ body {
   font-size: 1.6rem;
   color: white;
 }
+
 .status-container.success {
   background-color: #43a047;
 }
@@ -229,16 +268,16 @@ body {
 
 .pokemon-preview {
   background-color: white;
-  width:110px;
-  height:110px;
+  width: 110px;
+  height: 110px;
   margin: 40% auto 20px auto;
   display: block;
-  border-radius: 50%;   
+  border-radius: 50%;
 }
 
-img.status-preview-img{
+img.status-preview-img {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
 .title-status {
